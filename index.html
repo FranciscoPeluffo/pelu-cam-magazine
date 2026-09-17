@@ -5,6 +5,7 @@
   2. .photo-slot[data-slot="spread"]  — horizontal, corte de página a mitad de nota
   Swap: reemplazar el contenido del div por <img src="..." alt="..."> y sacar la clase de degradé.
 -->
+<meta charset="UTF-8">
 <title>Pelu &amp; Cam</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,500;1,600;1,700;1,900&family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&family=Barlow+Condensed:wght@500;600;700&display=swap');
@@ -206,6 +207,37 @@
     .reveal{ opacity:0; transform:translateY(14px); transition:opacity .7s ease, transform .7s ease; }
     .reveal.in{ opacity:1; transform:none; }
   }
+
+  /* ---------- FOTOLIBRO (page-flip) ---------- */
+  .book-shell{ display:flex; flex-direction:column; align-items:center; margin-top:2.5rem; }
+  .book-frame{ width:100%; max-width:840px; }
+  .book{ width:100%; margin:0 auto; }
+  .book .page{
+    background:#171310; overflow:hidden;
+    box-shadow: inset 0 0 0 1px rgba(245,239,226,.08);
+  }
+  .book .page img{ width:100%; height:100%; object-fit:cover; display:block; user-select:none; -webkit-user-drag:none; }
+  .book .page.--hard{ background:#0d0b09; }
+  .book .page.page-blank{ background:#f2ede1 !important; }
+  .book-nav{ display:flex; align-items:center; justify-content:center; gap:1.4rem; margin-top:1.6rem; }
+  .book-btn{
+    font-family:'Playfair Display',serif; font-size:1.3rem; line-height:1; color:var(--ink);
+    background:transparent; border:1px solid var(--line); border-radius:100px; width:2.6rem; height:2.6rem;
+    display:flex; align-items:center; justify-content:center; cursor:pointer; transition:border-color .15s, color .15s;
+  }
+  .book-btn:hover{ border-color:var(--gold); color:var(--gold); }
+  .book-btn:disabled{ opacity:.3; cursor:default; }
+  .book-btn:disabled:hover{ border-color:var(--line); color:var(--ink); }
+  .book-page-indicator{
+    font-family:'Barlow Condensed',sans-serif; font-weight:600; letter-spacing:.1em;
+    text-transform:uppercase; font-size:.78rem; color:var(--ink-dim); min-width:5.5em; text-align:center;
+  }
+  .book-page-indicator .num{ color:var(--gold); }
+  .book-hint{
+    margin-top:1rem; text-align:center; font-family:'Barlow Condensed',sans-serif; text-transform:uppercase;
+    letter-spacing:.08em; font-size:.7rem; color:var(--ink-dim); opacity:.75;
+  }
+
 </style>
 
 <!-- ================= COVER ================= -->
@@ -245,7 +277,7 @@
   <div class="wrap">
     <div class="contents-head">
       <h2>En este número</h2>
-      <span class="kicker">7 notas</span>
+      <span class="kicker">8 notas</span>
     </div>
     <ul class="toc-list">
       <li><a href="#racha"><span class="toc-num">01</span><span class="toc-title">La racha de 1.064 días</span><span class="toc-hint">Portada</span></a></li>
@@ -255,6 +287,7 @@
       <li><a href="#risas"><span class="toc-num">05</span><span class="toc-title">9.634 razones para reírse</span><span class="toc-hint">Humor</span></a></li>
       <li><a href="#reservado"><span class="toc-num">06</span><span class="toc-title">Contenido reservado</span><span class="toc-hint">+18 · discreto</span></a></li>
       <li><a href="#paces"><span class="toc-num">07</span><span class="toc-title">Hacer las paces</span><span class="toc-hint">Cierre</span></a></li>
+      <li><a href="#fotolibro"><span class="toc-num">08</span><span class="toc-title">El fotolibro</span><span class="toc-hint">Edición impresa</span></a></li>
     </ul>
   </div>
 </section>
@@ -441,6 +474,73 @@
   </div>
 </section>
 
+<!-- ================= 08 · FOTOLIBRO ================= -->
+<section class="spread" id="fotolibro">
+  <div class="wrap">
+    <div class="spread-head">
+      <span class="kicker">Nota 08 · Edición impresa</span>
+      <h2>El fotolibro</h2>
+      <p class="deck">42 páginas, tapa dura, 20×27cm — pasá las hojas.</p>
+    </div>
+    <div class="book-shell">
+      <div class="book-frame">
+        <div class="book" id="book">
+        <div class="page --hard" data-density="hard"><img src="images/fotolibro/page-00-tapa.jpg" alt="Tapa del fotolibro" loading="eager"></div>
+        <div class="page page-blank"></div>
+        <div class="page"><img src="images/fotolibro/page-01.jpg" alt="Página 1" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-02.jpg" alt="Página 2" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-03.jpg" alt="Página 3" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-04.jpg" alt="Página 4" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-05.jpg" alt="Página 5" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-06.jpg" alt="Página 6" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-07.jpg" alt="Página 7" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-08.jpg" alt="Página 8" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-09.jpg" alt="Página 9" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-10.jpg" alt="Página 10" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-11.jpg" alt="Página 11" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-12.jpg" alt="Página 12" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-13.jpg" alt="Página 13" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-14.jpg" alt="Página 14" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-15.jpg" alt="Página 15" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-16.jpg" alt="Página 16" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-17.jpg" alt="Página 17" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-18.jpg" alt="Página 18" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-19.jpg" alt="Página 19" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-20.jpg" alt="Página 20" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-21.jpg" alt="Página 21" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-22.jpg" alt="Página 22" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-23.jpg" alt="Página 23" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-24.jpg" alt="Página 24" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-25.jpg" alt="Página 25" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-26.jpg" alt="Página 26" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-27.jpg" alt="Página 27" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-28.jpg" alt="Página 28" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-29.jpg" alt="Página 29" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-30.jpg" alt="Página 30" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-31.jpg" alt="Página 31" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-32.jpg" alt="Página 32" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-33.jpg" alt="Página 33" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-34.jpg" alt="Página 34" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-35.jpg" alt="Página 35" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-36.jpg" alt="Página 36" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-37.jpg" alt="Página 37" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-38.jpg" alt="Página 38" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-39.jpg" alt="Página 39" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-40.jpg" alt="Página 40" loading="lazy"></div>
+        <div class="page page-blank"></div>
+        <div class="page --hard" data-density="hard"><img src="images/fotolibro/page-41-contratapa.jpg" alt="Contratapa del fotolibro" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="book-nav">
+        <button type="button" class="book-btn" id="bookPrev" aria-label="Página anterior">‹</button>
+        <div class="book-page-indicator"><span class="num" id="bookPageNum">1</span> / <span id="bookPageTotal">42</span></div>
+        <button type="button" class="book-btn" id="bookNext" aria-label="Página siguiente">›</button>
+      </div>
+      <p class="book-hint">Arrastrá una esquina o tocá los bordes para pasar de página</p>
+    </div>
+  </div>
+</section>
+
 <!-- ================= COLOPHON ================= -->
 <footer class="colophon">
   <div class="wrap">
@@ -458,4 +558,82 @@
     }, { threshold: .12 });
     document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
   }
+</script>
+
+<!-- ================= FOTOLIBRO (page-flip) ================= -->
+<script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
+<script>
+  (function(){
+    var bookEl = document.getElementById('book');
+    if (!bookEl || !window.St || !window.St.PageFlip) return;
+
+    var pageFlip = new St.PageFlip(bookEl, {
+      width: 380,
+      height: 501,
+      size: 'stretch',
+      minWidth: 240,
+      maxWidth: 420,
+      minHeight: 316,
+      maxHeight: 554,
+      maxShadowOpacity: 0.55,
+      showCover: true,
+      usePortrait: true,
+      mobileScrollSupport: true,
+      useMouseEvents: true,
+      swipeDistance: 20
+    });
+
+    pageFlip.loadFromHTML(document.querySelectorAll('#book .page'));
+
+    var pageNumEl = document.getElementById('bookPageNum');
+    var pageTotalEl = document.getElementById('bookPageTotal');
+    var prevBtn = document.getElementById('bookPrev');
+    var nextBtn = document.getElementById('bookNext');
+    var total = pageFlip.getPageCount();
+    pageTotalEl.textContent = total;
+
+    function updateNav(index){
+      pageNumEl.textContent = index + 1;
+      prevBtn.disabled = index <= 0;
+      nextBtn.disabled = index >= total - 1;
+    }
+
+    // StPageFlip (v2.0.7) fails to paint the final page when it lands alone
+    // as the last "hard" page of a landscape spread — the internal state
+    // updates (page index, events) but no element gets shown. Patch the
+    // DOM ourselves for that one transition using the library's own
+    // measured bounds, and hand control back once we navigate away.
+    var lastIndex = total - 1;
+    var allPageEls = bookEl.querySelectorAll('.page');
+    var lastEl = allPageEls[lastIndex];
+    var lastPageFixed = false;
+
+    function showLastPageManually(){
+      var rect = pageFlip.getBoundsRect();
+      allPageEls.forEach(function(el, idx){
+        if (idx !== lastIndex) el.style.display = 'none';
+      });
+      lastEl.style.position = 'absolute';
+      lastEl.style.top = rect.top + 'px';
+      lastEl.style.left = rect.left + 'px';
+      lastEl.style.width = rect.pageWidth + 'px';
+      lastEl.style.height = rect.height + 'px';
+      lastEl.style.zIndex = '1';
+      lastEl.style.display = 'block';
+      lastPageFixed = true;
+    }
+
+    pageFlip.on('flip', function(e){
+      updateNav(e.data);
+      if (e.data === lastIndex) setTimeout(showLastPageManually, 50);
+      else if (lastPageFixed){ lastEl.style.display = 'none'; lastPageFixed = false; }
+    });
+    window.addEventListener('resize', function(){ if (lastPageFixed) showLastPageManually(); });
+    prevBtn.addEventListener('click', function(){
+      if (lastPageFixed) pageFlip.turnToPage(lastIndex - 1);
+      else pageFlip.flipPrev();
+    });
+    nextBtn.addEventListener('click', function(){ pageFlip.flipNext(); });
+    updateNav(0);
+  })();
 </script>
