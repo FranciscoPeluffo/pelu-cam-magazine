@@ -211,7 +211,7 @@
   /* ---------- FOTOLIBRO (page-flip) ---------- */
   .book-shell{ display:flex; flex-direction:column; align-items:center; margin-top:2.5rem; }
   .book-frame{ width:100%; max-width:840px; }
-  .book{ width:100%; margin:0 auto; }
+  .book{ width:100%; margin:0 auto; touch-action:none; }
   .book .page{
     background:#171310; overflow:hidden;
     box-shadow: inset 0 0 0 1px rgba(245,239,226,.08);
@@ -578,7 +578,7 @@
       maxShadowOpacity: 0.55,
       showCover: true,
       usePortrait: true,
-      mobileScrollSupport: true,
+      mobileScrollSupport: false,
       useMouseEvents: true,
       swipeDistance: 20
     });
