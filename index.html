@@ -209,9 +209,9 @@
   }
 
   /* ---------- FOTOLIBRO (page-flip) ---------- */
-  .book-shell{ display:flex; flex-direction:column; align-items:center; margin-top:2.5rem; }
+  .book-shell{ display:flex; flex-direction:column; align-items:center; margin-top:2.5rem; overflow-anchor:none; }
   .book-frame{ width:100%; max-width:840px; }
-  .book{ width:100%; margin:0 auto; touch-action:none; }
+  .book{ width:100%; margin:0 auto; touch-action:none; overflow-anchor:none; }
   .book .page{
     background:#171310; overflow:hidden;
     box-shadow: inset 0 0 0 1px rgba(245,239,226,.08);
@@ -487,48 +487,48 @@
         <div class="book" id="book">
         <div class="page --hard" data-density="hard"><img src="images/fotolibro/page-00-tapa.jpg" alt="Tapa del fotolibro" loading="eager"></div>
         <div class="page page-blank"></div>
-        <div class="page"><img src="images/fotolibro/page-01.jpg" alt="Página 1" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-02.jpg" alt="Página 2" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-03.jpg" alt="Página 3" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-04.jpg" alt="Página 4" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-05.jpg" alt="Página 5" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-06.jpg" alt="Página 6" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-07.jpg" alt="Página 7" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-08.jpg" alt="Página 8" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-09.jpg" alt="Página 9" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-10.jpg" alt="Página 10" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-11.jpg" alt="Página 11" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-12.jpg" alt="Página 12" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-13.jpg" alt="Página 13" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-14.jpg" alt="Página 14" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-15.jpg" alt="Página 15" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-16.jpg" alt="Página 16" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-17.jpg" alt="Página 17" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-18.jpg" alt="Página 18" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-19.jpg" alt="Página 19" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-20.jpg" alt="Página 20" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-21.jpg" alt="Página 21" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-22.jpg" alt="Página 22" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-23.jpg" alt="Página 23" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-24.jpg" alt="Página 24" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-25.jpg" alt="Página 25" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-26.jpg" alt="Página 26" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-27.jpg" alt="Página 27" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-28.jpg" alt="Página 28" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-29.jpg" alt="Página 29" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-30.jpg" alt="Página 30" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-31.jpg" alt="Página 31" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-32.jpg" alt="Página 32" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-33.jpg" alt="Página 33" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-34.jpg" alt="Página 34" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-35.jpg" alt="Página 35" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-36.jpg" alt="Página 36" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-37.jpg" alt="Página 37" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-38.jpg" alt="Página 38" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-39.jpg" alt="Página 39" loading="lazy"></div>
-        <div class="page"><img src="images/fotolibro/page-40.jpg" alt="Página 40" loading="lazy"></div>
+        <div class="page"><img src="images/fotolibro/page-01.jpg" alt="Página 1"></div>
+        <div class="page"><img src="images/fotolibro/page-02.jpg" alt="Página 2"></div>
+        <div class="page"><img src="images/fotolibro/page-03.jpg" alt="Página 3"></div>
+        <div class="page"><img src="images/fotolibro/page-04.jpg" alt="Página 4"></div>
+        <div class="page"><img src="images/fotolibro/page-05.jpg" alt="Página 5"></div>
+        <div class="page"><img src="images/fotolibro/page-06.jpg" alt="Página 6"></div>
+        <div class="page"><img src="images/fotolibro/page-07.jpg" alt="Página 7"></div>
+        <div class="page"><img src="images/fotolibro/page-08.jpg" alt="Página 8"></div>
+        <div class="page"><img src="images/fotolibro/page-09.jpg" alt="Página 9"></div>
+        <div class="page"><img src="images/fotolibro/page-10.jpg" alt="Página 10"></div>
+        <div class="page"><img src="images/fotolibro/page-11.jpg" alt="Página 11"></div>
+        <div class="page"><img src="images/fotolibro/page-12.jpg" alt="Página 12"></div>
+        <div class="page"><img src="images/fotolibro/page-13.jpg" alt="Página 13"></div>
+        <div class="page"><img src="images/fotolibro/page-14.jpg" alt="Página 14"></div>
+        <div class="page"><img src="images/fotolibro/page-15.jpg" alt="Página 15"></div>
+        <div class="page"><img src="images/fotolibro/page-16.jpg" alt="Página 16"></div>
+        <div class="page"><img src="images/fotolibro/page-17.jpg" alt="Página 17"></div>
+        <div class="page"><img src="images/fotolibro/page-18.jpg" alt="Página 18"></div>
+        <div class="page"><img src="images/fotolibro/page-19.jpg" alt="Página 19"></div>
+        <div class="page"><img src="images/fotolibro/page-20.jpg" alt="Página 20"></div>
+        <div class="page"><img src="images/fotolibro/page-21.jpg" alt="Página 21"></div>
+        <div class="page"><img src="images/fotolibro/page-22.jpg" alt="Página 22"></div>
+        <div class="page"><img src="images/fotolibro/page-23.jpg" alt="Página 23"></div>
+        <div class="page"><img src="images/fotolibro/page-24.jpg" alt="Página 24"></div>
+        <div class="page"><img src="images/fotolibro/page-25.jpg" alt="Página 25"></div>
+        <div class="page"><img src="images/fotolibro/page-26.jpg" alt="Página 26"></div>
+        <div class="page"><img src="images/fotolibro/page-27.jpg" alt="Página 27"></div>
+        <div class="page"><img src="images/fotolibro/page-28.jpg" alt="Página 28"></div>
+        <div class="page"><img src="images/fotolibro/page-29.jpg" alt="Página 29"></div>
+        <div class="page"><img src="images/fotolibro/page-30.jpg" alt="Página 30"></div>
+        <div class="page"><img src="images/fotolibro/page-31.jpg" alt="Página 31"></div>
+        <div class="page"><img src="images/fotolibro/page-32.jpg" alt="Página 32"></div>
+        <div class="page"><img src="images/fotolibro/page-33.jpg" alt="Página 33"></div>
+        <div class="page"><img src="images/fotolibro/page-34.jpg" alt="Página 34"></div>
+        <div class="page"><img src="images/fotolibro/page-35.jpg" alt="Página 35"></div>
+        <div class="page"><img src="images/fotolibro/page-36.jpg" alt="Página 36"></div>
+        <div class="page"><img src="images/fotolibro/page-37.jpg" alt="Página 37"></div>
+        <div class="page"><img src="images/fotolibro/page-38.jpg" alt="Página 38"></div>
+        <div class="page"><img src="images/fotolibro/page-39.jpg" alt="Página 39"></div>
+        <div class="page"><img src="images/fotolibro/page-40.jpg" alt="Página 40"></div>
         <div class="page page-blank"></div>
-        <div class="page --hard" data-density="hard"><img src="images/fotolibro/page-41-contratapa.jpg" alt="Contratapa del fotolibro" loading="lazy"></div>
+        <div class="page --hard" data-density="hard"><img src="images/fotolibro/page-41-contratapa.jpg" alt="Contratapa del fotolibro"></div>
         </div>
       </div>
       <div class="book-nav">
