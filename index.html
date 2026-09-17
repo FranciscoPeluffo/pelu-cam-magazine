@@ -578,10 +578,16 @@
       maxShadowOpacity: 0.55,
       showCover: true,
       usePortrait: true,
-      mobileScrollSupport: false,
+      mobileScrollSupport: true,
       useMouseEvents: true,
       swipeDistance: 20
     });
+
+    // The library only preventDefault()s a touch-scroll once it decides
+    // the gesture is a page drag (~10px of horizontal movement), which
+    // leaves a gap where mobile browsers can already start scrolling the
+    // whole page. Block that from the very first touch on the book.
+    bookEl.addEventListener('touchstart', function(e){ e.preventDefault(); }, { passive: false });
 
     pageFlip.loadFromHTML(document.querySelectorAll('#book .page'));
 
